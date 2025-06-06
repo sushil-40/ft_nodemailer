@@ -1,5 +1,6 @@
 import axios from "axios";
-const rootApiEp = "http://localhost:8000/api/v1/message";
+
+const rootApiEp = import.meta.env.VITE_ROOT_API + "/api/v1";
 
 const apiProcessor = async ({ method, url, data }) => {
   try {
@@ -21,7 +22,7 @@ const apiProcessor = async ({ method, url, data }) => {
 export const postNewMessage = (data) => {
   const obj = {
     method: "post",
-    url: rootApiEp + "/",
+    url: rootApiEp + "/message",
     data,
   };
   return apiProcessor(obj);
