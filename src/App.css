@@ -1,0 +1,9 @@
+body {
+  background: black;
+  color: white;
+}
+
+.node-mailer {
+  border: 1px solid white;
+  padding: 25px;
+}
